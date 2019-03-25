@@ -3,6 +3,7 @@ package REST.Trail.resource;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.FormParam;
@@ -12,10 +13,23 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
 import REST.Trail.model.User;
 import REST.Trail.service.UserService;
+
+import java.io.File;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+
+
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
+
+import org.glassfish.jersey.server.Uri;
+
 
 
 @Path("/users")
@@ -38,6 +52,39 @@ public class UserResource {
 		 * password);
 		 */
 		userService.addUser(user);
+	}
+	
+	@Context
+	private HttpServletRequest request;
+	@POST
+	@Path("/login")
+	public Response verifyCustomer(@FormParam(value = "inputEmail") String email,
+			@FormParam(value = "inputPassword") String password) {
+		URI location;
+		try {
+			System.out.println("SENT IN DETAILS " + email + " " + password);
+			User user = userService.loginUser(email, password);
+			if (user == null) {
+				System.out.print("CANT FIND USER");
+				
+			}
+			else
+			{
+				request.getSession().setAttribute("user", user);
+				request.setAttribute("customer", user);
+				request.getSession().setAttribute("name", user.getLibraryPersistent().getLibraryId());
+
+				location = new URI("http://localhost:8080/tickets/success.jsp");//change the URI
+				return Response.temporaryRedirect(location).build();
+			}
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return null;
+		// should return the sucess webpage will figure this out
+
 	}
 	
 	/*@PUT
