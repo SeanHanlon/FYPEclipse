@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -28,7 +29,36 @@ public class TrailResource {
 	public List<Trail> getTrails() {
 		return trailService.getAllTrails();
 	}
+	
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	@Path("/nameSearch")
+	public List<Trail> nameSearch(@FormParam(value = "userSearch") String userSearch) {
+		List<Trail> trails = trailService.searchTrail(userSearch);
+		return trails;
+		
+	}
+	
 	/*
+	
+	@POST
+	@Produces(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	@Path("/searchByCategory")
+	public List<Item> searchCategory(@FormParam(value = "searchCat") String category) {
+		List<Item> items = itemService.getItemByCategory(category);
+		if(items != null)
+		{
+			return items;
+		}
+		else
+		{
+			return null;
+		}
+		
+	}
+	
 	@POST
 	public Trail addTrail(Trail trail) {
 		return trailService.addTrail(trail); 
