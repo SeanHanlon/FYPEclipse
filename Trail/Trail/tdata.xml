@@ -1488,7 +1488,7 @@ Co. Cavan
     <Format>Circular</Format>
     <Length>5</Length>
     <Climb>None</Climb>
-    <Grade>Esay</Grade>
+    <Grade>Easy</Grade>
     <Time>75</Time>
     <Finish>O&apos;Briensbridge</Finish>
     <TrailManagementOrganisation>Killaloe Tourist Information Office &lt;br /&gt; Killaloe Heritage Centre The Bridge Killaloe Clare
@@ -1608,7 +1608,7 @@ Ireland. &lt;br /&gt; Tel/Fax 00353 (0)27 70054</TrailManagementOrganisation>
     <Format>Circular</Format>
     <Length>10</Length>
     <Climb>248</Climb>
-    <Grade>Moderate-Difficult </Grade>
+    <Grade>Difficult </Grade>
     <Time>300</Time>
     <Finish>Western Pier</Finish>
     <TrailManagementOrganisation>Beara Tourism and Development Association, 
@@ -1632,7 +1632,7 @@ Ireland. &lt;br /&gt; Tel/Fax 00353 (0)27 70054</TrailManagementOrganisation>
     <Format>Circular</Format>
     <Length>7</Length>
     <Climb>95</Climb>
-    <Grade>Easy- Moderate</Grade>
+    <Grade>Moderate</Grade>
     <Time>180</Time>
     <Finish>Rerrin Village</Finish>
     <TrailManagementOrganisation>Beara Tourism and Development Association, 
@@ -1871,7 +1871,7 @@ Tel/Fax 00353 (0)27 70054  Email &lt;a href=�mailto: bearatours@eircom.net�&
     <Format>Circular</Format>
     <Length>4</Length>
     <Climb>50</Climb>
-    <Grade>Moderate-Difficult </Grade>
+    <Grade>Difficult </Grade>
     <Time>120</Time>
     <Finish>Tooreen Point carpark at the tip of Sheep�s Head peninsula</Finish>
     <TrailManagementOrganisation>The Sheeps Head Way Committee
@@ -1894,7 +1894,7 @@ Durrus, Bantry, Co.Cork
     <Format>Circular</Format>
     <Length>16</Length>
     <Climb>350</Climb>
-    <Grade>Moderate-Difficult </Grade>
+    <Grade>Difficult </Grade>
     <Time>360</Time>
     <Finish>Tooreen Point carpark at the  tip of Sheep�s Head peninsula</Finish>
     <TrailManagementOrganisation>The Sheeps Head Way Committee
@@ -3692,7 +3692,7 @@ Tel: ++ 353 61 921587  Fax: ++ 353 61 921400 </TrailManagementOrganisation>
     <Format>Circular</Format>
     <Length>0.5</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>30</Time>
     <Finish>Lower carpark, Gougane Barra forest park</Finish>
     <TrailManagementOrganisation></TrailManagementOrganisation>
@@ -3912,7 +3912,7 @@ Fax: ++ 353 74 9131976
     <Format>Linear</Format>
     <Length>0.5</Length>
     <Climb>0.5</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>12</Time>
     <Finish>Ards Forest Park</Finish>
     <TrailManagementOrganisation></TrailManagementOrganisation>
@@ -3933,7 +3933,7 @@ Fax: ++ 353 74 9131976
     <Format>Linear</Format>
     <Length>1</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>90</Time>
     <Finish>Ards Forest Park</Finish>
     <TrailManagementOrganisation></TrailManagementOrganisation>
@@ -4065,7 +4065,7 @@ Fax: ++ 353 74 9131976
     <Format>Circular</Format>
     <Length>2</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>60</Time>
     <Finish>Drumboe Forest entrance Carpark</Finish>
     <TrailManagementOrganisation>Coillte Ballybofey, Blackburn Units Glenview Business Park,  Donegal Road, Ballybofey, 
@@ -4602,7 +4602,7 @@ Co. Galway. &lt;br /&gt; Tel: ++ 353 909 679076 Fax: ++ 353 909 679081
     <Format>Circular</Format>
     <Length>0.3</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>10</Time>
     <Finish>Car Park No. 3</Finish>
     <TrailManagementOrganisation>Coillte Castleisland, Back of the Forge, Lower Main Street, Castleisland, Co. Kerry. &lt;br /&gt; Tel: ++ 353 66 7163370  Fax: ++ 353 66 7163825
@@ -4778,7 +4778,7 @@ Co. Wicklow. &lt;br /&gt; Tel: 1890 367378  Fax: ++ 353 1 2011199
     <Format>Circular</Format>
     <Length>0.8</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>30</Time>
     <Finish>Donadea Forest Carpark</Finish>
     <TrailManagementOrganisation>Coillte, NTMK, Dublin Road, Newtownmountkennedy, 
@@ -4830,7 +4830,7 @@ Co. Wicklow. &lt;br /&gt; Tel: 1890 367378  Fax: ++ 353 1 2011199
     <Format>Circular</Format>
     <Length>2</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>90</Time>
     <Finish>Forest Entrance Carpark</Finish>
     <TrailManagementOrganisation>Coillte, NTMK, Dublin Road, Newtownmountkennedy, 
@@ -4852,7 +4852,7 @@ Co. Wicklow. &lt;br /&gt; Tel: 1890 367378  Fax: ++ 353 1 2011199</TrailManageme
     <Format>Circular</Format>
     <Length>3.3</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>120</Time>
     <Finish>Forest Entrance Carpark</Finish>
     <TrailManagementOrganisation>Coillte, NTMK, Dublin Road, Newtownmountkennedy, 
@@ -5239,7 +5239,7 @@ Construction works on the Castlepook wind farm in the Ballyhouras commenced on M
     <Format>Circular</Format>
     <Length>1</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>30</Time>
     <Finish>Carpark</Finish>
     <TrailManagementOrganisation>Coillte Limerick, Unit No 5, Castletroy Park Business Centre, Castletroy, Limerick. &lt;br /&gt; Tel: 1890 367378
@@ -5317,7 +5317,7 @@ Fax: ++ 353 61 338271
     <Format>Circular</Format>
     <Length>1</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>20</Time>
     <Finish>Forest Entrance Carpark</Finish>
     <TrailManagementOrganisation>Coillte Limerick, Unit No 5, Castletroy Park Business Centre, Castletroy, Limerick. &lt;br /&gt; Tel: 1890 367378
@@ -5436,7 +5436,7 @@ Co. Monaghan &lt;br /&gt; Tel: ++ 353 47 62900
     <Format>Circular</Format>
     <Length>2</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>60</Time>
     <Finish>Forest Car Park</Finish>
     <TrailManagementOrganisation>Coillte Monaghan,
@@ -5641,7 +5641,7 @@ Sligo. &lt;br /&gt; Tel: 1890 367378  Fax: ++ 353 71 9143014
     <Format>Circular</Format>
     <Length>3</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>60</Time>
     <Finish>Hazelwood Carpark</Finish>
     <TrailManagementOrganisation>Coillte Sligo, Unit 4/5 Pearse Plaza, Pearse Road, 
@@ -5824,7 +5824,7 @@ Sligo. &lt;br /&gt; Tel: 1890 367378  Fax: ++ 353 71 9143014
     <Format>Linear</Format>
     <Length>0.2</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>15</Time>
     <Finish>Mullaghmeen Forest Carpark</Finish>
     <TrailManagementOrganisation>Coillte Mullingar, 1st Floor, Block B,  Marlinstown Office Park, Mullingar, Co. Westmeath. &lt;br /&gt; Tel: 1890 367378  Fax: ++ 353 44 9342770
@@ -7515,7 +7515,7 @@ visit www.SligoWalks.ie &lt;/a&gt; &lt;/b&gt;</Comments>
     <Format>Circular</Format>
     <Length>0.25</Length>
     <Climb>30</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>10</Time>
     <Finish>Gortarowey Forest entrance car park</Finish>
     <TrailManagementOrganisation>Coillte Sligo, Unit 4/5 Pearse Plaza, Pearse Road, 
@@ -7538,7 +7538,7 @@ Sligo. &lt;br /&gt; Tel: 1890 367378  Fax: ++ 353 71 9143014
     <Format>Linear</Format>
     <Length>1.2</Length>
     <Climb>0</Climb>
-    <Grade>Easy - buggy and wheelchair friendly</Grade>
+    <Grade>Easy - Easy</Grade>
     <Time>45</Time>
     <Finish>car park within Kilrush Forest </Finish>
     <TrailManagementOrganisation>Coillte Scarriff, Drewsboro, Scarriff, 
@@ -7636,7 +7636,7 @@ Fax: ++ 353 94 9021480</TrailManagementOrganisation>
     <Format>Linear</Format>
     <Length>1.7</Length>
     <Climb>0</Climb>
-    <Grade>Easy - buggy and wheelchair friendly</Grade>
+    <Grade>Easy - Easy</Grade>
     <Time>70</Time>
     <Finish>car park within Belleek Woods </Finish>
     <TrailManagementOrganisation>Coillte Castlebar, The Cedar Building, Moneen, 
@@ -7684,7 +7684,7 @@ Tel: ++ 353 71 9670271  Fax: ++ 353 71 9673140
     <Format>Linear</Format>
     <Length>0.5</Length>
     <Climb>0</Climb>
-    <Grade>Easy - buggy and wheelchair friendly</Grade>
+    <Grade>Easy - Easy</Grade>
     <Time>60</Time>
     <Finish>Derryvunny Woods entrance car park</Finish>
     <TrailManagementOrganisation>Lough Key, Harbour Building, Lough Key Forest Park, 
@@ -7755,7 +7755,7 @@ Tel: ++ 353 53 9239400, Fax: ++ 353 53 9235379
     <Format>Circular</Format>
     <Length>8</Length>
     <Climb>220</Climb>
-    <Grade>Difficult   Severe</Grade>
+    <Grade>Severe</Grade>
     <Time>60</Time>
     <Finish>Ticknock forest entrance car park </Finish>
     <TrailManagementOrganisation>Coillte, Head Office, Newtownmountkennedy, Co. Wicklow &lt;br /&gt; Tel:++353 1 2011111 Fax:++353 1 2011199</TrailManagementOrganisation>
@@ -7958,7 +7958,7 @@ Tel: ++ 353 52 7445394 Fax: ++ 353 52 7445395
     <Format>Circular</Format>
     <Length>1.2</Length>
     <Climb>25</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>30</Time>
     <Finish>Car Park</Finish>
     <TrailManagementOrganisation></TrailManagementOrganisation>
@@ -8063,7 +8063,7 @@ Tel: ++ 353 52 7445394 Fax: ++ 353 52 7445395
     <Format>Linear</Format>
     <Length>0.3</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>20</Time>
     <Finish>Raheens Wood Car Park</Finish>
     <TrailManagementOrganisation></TrailManagementOrganisation>
@@ -8189,7 +8189,7 @@ Tel: ++ 353 52 7445394 Fax: ++ 353 52 7445395
     <Format>Circular</Format>
     <Length>1.3</Length>
     <Climb>0</Climb>
-    <Grade>Multi-Access/Easy</Grade>
+    <Grade>Easy</Grade>
     <Time>30</Time>
     <Finish>Entrance to McMahon Park</Finish>
     <TrailManagementOrganisation>Anna Connor, Walking Development Officer, Community &amp; Enterprise Section, Aras on Chontae, 
@@ -8311,7 +8311,7 @@ Tel/Fax 00353 (0)27 70054  Email &lt;a href=�mailto: bearatours@eircom.net�&
     <Format>Circular</Format>
     <Length>9</Length>
     <Climb>300</Climb>
-    <Grade>Moderate - Hard</Grade>
+    <Grade>Hard</Grade>
     <Time>180</Time>
     <Finish>car park at Arundels Bar by Ahakisha pier</Finish>
     <TrailManagementOrganisation></TrailManagementOrganisation>
@@ -10625,7 +10625,7 @@ Ireland. &lt;br /&gt; Tel/Fax 00353 (0)27 70054</TrailManagementOrganisation>
     <Format>Circular</Format>
     <Length>0.4</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>10</Time>
     <Finish>Car Park</Finish>
     <TrailManagementOrganisation></TrailManagementOrganisation>
@@ -11445,7 +11445,7 @@ Web: &lt;a href=&quot;http://www.cldc.ie/ rural&quot;target=&quot;_blank&quot; &
     <Format>Linear</Format>
     <Length>2.4</Length>
     <Climb>0</Climb>
-    <Grade>Easy - buggy and wheelchair friendly</Grade>
+    <Grade>Easy - Easy</Grade>
     <Time>45</Time>
     <Finish>Dunhill Castle</Finish>
     <TrailManagementOrganisation>Willie Moore, Chairman, Anne Valley Farmers Group. 0872633083</TrailManagementOrganisation>
@@ -11487,7 +11487,7 @@ Web: &lt;a href=&quot;http://www.cldc.ie/ rural&quot;target=&quot;_blank&quot; &
     <Format>Circular</Format>
     <Length>1.5</Length>
     <Climb>0</Climb>
-    <Grade>Easy - buggy and wheelchair friendly</Grade>
+    <Grade>Easy - Easy</Grade>
     <Time>30</Time>
     <Finish>At car park at entrance to forest</Finish>
     <TrailManagementOrganisation></TrailManagementOrganisation>
@@ -11637,7 +11637,7 @@ The Mall, Castlebar, Co. Mayo. Tel: 094 9047545 &lt;br /&gt; Email: &lt;a href=&
     <Format>Circular</Format>
     <Length>1</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>15</Time>
     <Finish>Western entrance to Regional Park</Finish>
     <TrailManagementOrganisation></TrailManagementOrganisation>
@@ -11853,7 +11853,7 @@ Web: &lt;a href=&quot;http://www.clarewalks.com/&quot;target=&quot;_blank&quot; 
     <Format>Circular</Format>
     <Length>9.5</Length>
     <Climb>245</Climb>
-    <Grade>Moderately Strenuous</Grade>
+    <Grade>Strenuous</Grade>
     <Time>150</Time>
     <Finish>Broadford car park opposite church</Finish>
     <TrailManagementOrganisation>Link to wesbite with further information </TrailManagementOrganisation>
@@ -11916,7 +11916,7 @@ Web: &lt;a href=&quot;http://www.clarewalks.com/&quot;target=&quot;_blank&quot; 
     <Format>Linear</Format>
     <Length>14</Length>
     <Climb>240</Climb>
-    <Grade>Stenuous</Grade>
+    <Grade>Strenuous</Grade>
     <Time>210</Time>
     <Finish>Beside church in Ashford</Finish>
     <TrailManagementOrganisation>Link to wesbite with further information </TrailManagementOrganisation>
@@ -12462,7 +12462,7 @@ Web: &lt;a href=&quot;http://www.clarewalks.com/&quot;target=&quot;_blank&quot; 
     <Format>Circular</Format>
     <Length>3.2</Length>
     <Climb>0</Climb>
-    <Grade>Multi-Access/Easy</Grade>
+    <Grade>Easy</Grade>
     <Time>50</Time>
     <Finish>Entrance to McMahon Park</Finish>
     <TrailManagementOrganisation>Anna Connor, Walking Development Officer, Community &amp; Enterprise Section, Aras on Chontae, 
@@ -13395,7 +13395,7 @@ Note:  The greeway development extends from the Meath/Westmeath border to Abbeys
     <Format>Linear</Format>
     <Length>4.2</Length>
     <Climb>0</Climb>
-    <Grade>Easy - buggy and wheelchair friendly</Grade>
+    <Grade>Easy - Easy</Grade>
     <Time>40</Time>
     <Finish>Belleek Wood Carpark</Finish>
     <TrailManagementOrganisation>Mayo County Council</TrailManagementOrganisation>
@@ -13416,7 +13416,7 @@ Note:  The greeway development extends from the Meath/Westmeath border to Abbeys
     <Format>Linear</Format>
     <Length>4.2</Length>
     <Climb>0</Climb>
-    <Grade>Easy - buggy and wheelchair friendly</Grade>
+    <Grade>Easy - Easy</Grade>
     <Time>15</Time>
     <Finish>Belleek Wood Carpark</Finish>
     <TrailManagementOrganisation>Mayo County Council</TrailManagementOrganisation>
@@ -19153,7 +19153,7 @@ Hall take a right into the East End Car park.</Comments>
     <Format>Circular</Format>
     <Length>1.4</Length>
     <Climb>0</Climb>
-    <Grade>Buggy and wheelchair friendly</Grade>
+    <Grade>Easy</Grade>
     <Time>20</Time>
     <Finish>Car Park</Finish>
     <TrailManagementOrganisation></TrailManagementOrganisation>

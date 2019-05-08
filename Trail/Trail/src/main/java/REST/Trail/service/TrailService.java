@@ -20,8 +20,26 @@ public class TrailService {
 	}
 	
 	public List<Trail> searchTrail(String searchParam) {
-		List<Trail> trails = PersistenceUtil.searchTrail(searchParam);
-		return trails;
+		
+		List<Trail> finalTrails = new ArrayList<>();
+		
+		List<Trail> nameTrails = PersistenceUtil.searchTrail(searchParam);
+		List<Trail> countyTrails = PersistenceUtil.countyTrails(searchParam);
+		List<Trail> gradeTrails = PersistenceUtil.gradeTrails(searchParam);
+		
+		if(nameTrails != null) {
+			finalTrails.addAll(nameTrails);
+		}
+		
+		if(countyTrails != null) {
+			finalTrails.addAll(countyTrails);
+		}
+		
+		if(gradeTrails != null) {
+			finalTrails.addAll(gradeTrails);
+		}
+		
+		return finalTrails;
 	}
 	
 	/*

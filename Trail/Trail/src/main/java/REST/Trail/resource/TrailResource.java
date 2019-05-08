@@ -18,7 +18,6 @@ import REST.Trail.model.User;
 import REST.Trail.service.TrailService;
 import REST.Trail.service.UserService;
 
-
 @Path("/trails")
 public class TrailResource {
 	
@@ -37,11 +36,9 @@ public class TrailResource {
 	public List<Trail> nameSearch(@FormParam(value = "userSearch") String userSearch) {
 		List<Trail> trails = trailService.searchTrail(userSearch);
 		return trails;
-		
 	}
 	
 	/*
-	
 	@POST
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)

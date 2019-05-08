@@ -91,6 +91,27 @@ public class PersistenceUtil implements Serializable {
 		else 
 			return trails;
 	}
+	
+	public static List<Trail> countyTrails(String searchParam) {
+		EntityManager em = emf.createEntityManager();
+		List<Trail> trails = (List<Trail>) em.createNamedQuery("Trail.countySearch").setParameter("county", searchParam).getResultList();
+		em.close();
+		if (trails.size() == 0)
+			return null;
+		else 
+			return trails;
+	}
+	
+	public static List<Trail> gradeTrails(String searchParam) {
+		EntityManager em = emf.createEntityManager();
+		List<Trail> trails = (List<Trail>) em.createNamedQuery("Trail.gradeSearch").setParameter("grade", searchParam).getResultList();
+		em.close();
+		if (trails.size() == 0)
+			return null;
+		else 
+			return trails;
+	}
+	
 	/*
 	public static User findUserByName(String name){
 		EntityManager em = emf.createEntityManager();
