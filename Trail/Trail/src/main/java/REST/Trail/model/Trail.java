@@ -1,14 +1,24 @@
 package REST.Trail.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import REST.store.model.Item;
 
 //@NamedQuery(name = "Item.findByCategory", query = "select o from Item o where o.category like concat('%', :category, '%') "),
 @NamedQueries( {
@@ -40,8 +50,15 @@ public class Trail {
 	private double finLat;
 	private double finLong;
 	
-	@ManyToOne
-	private Favourites favourites;
+	
+	//private Set<Favourites> user_favs = new HashSet<>();
+	
+	/*@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinTable(name = "user_favs", joinColumns = {
+			@JoinColumn(name = "trail_id", referencedColumnName = "id") }, inverseJoinColumns = {
+					@JoinColumn(name = "item_id", referencedColumnName = "id") })
+	@ElementCollection(targetClass = Item.class)
+	private Set<Favourites> user_favs = new HashSet<>();*/
 	
 	public Trail() {
 		
@@ -158,13 +175,13 @@ public class Trail {
 		this.finLong = finLong;
 	}
 
-	public Favourites getFavourites() {
+	/*public Favourites getFavourites() {
 		return favourites;
 	}
 
 	public void setFavourites(Favourites favourites) {
 		this.favourites = favourites;
-	}
+	}*/
 
 	
 	

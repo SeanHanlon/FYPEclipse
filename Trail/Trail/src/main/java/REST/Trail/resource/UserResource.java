@@ -16,6 +16,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
+import REST.Trail.model.Trail;
 import REST.Trail.model.User;
 import REST.Trail.service.UserService;
 
@@ -69,7 +70,7 @@ public class UserResource {
 		else
 		{
 			request.getSession().setAttribute("user", user);
-			request.getSession().setAttribute("name", user.getName());
+			request.getSession().setAttribute("name", user.getId());
 			System.out.println(request.getSession().getAttribute("name")+" is logged in");
 		}
 	}
@@ -78,6 +79,22 @@ public class UserResource {
 	@Path("/logout")
 	public void logout() {
 		request.getSession().setAttribute("user", null);
+	}
+	
+	@GET
+	@Path("/getFavs")
+	public List<Trail> getFavs() {
+		User user = (User) request.getSession().getAttribute("user");
+		//List<Trail> trails = user.getFavourites().getTrails();
+		return null;
+		
+	}
+	
+	@POST
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	@Path("/addFav")
+	public void addFav(@FormParam(value = "name") String name) {
+		
 	}
 	
 	/*@PUT
