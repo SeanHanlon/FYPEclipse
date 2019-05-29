@@ -4,11 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -29,6 +31,9 @@ public class User {
 	private String name;
 	private String email;
 	private String password;
+	
+	@OneToOne(fetch=FetchType.EAGER)
+	private Favourites favourites;
 	
 	public User() {
 		
@@ -71,5 +76,15 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public Favourites getFavourites() {
+		return favourites;
+	}
+
+	public void setFavourites(Favourites favourites) {
+		this.favourites = favourites;
+	}
+	
+	
 	
 }

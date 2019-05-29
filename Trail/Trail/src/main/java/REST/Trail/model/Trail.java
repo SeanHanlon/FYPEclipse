@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -37,6 +39,9 @@ public class Trail {
 	private double startLong;
 	private double finLat;
 	private double finLong;
+	
+	@ManyToOne
+	private Favourites favourites;
 	
 	public Trail() {
 		
@@ -151,6 +156,14 @@ public class Trail {
 
 	public void setFinLong(double finLong) {
 		this.finLong = finLong;
+	}
+
+	public Favourites getFavourites() {
+		return favourites;
+	}
+
+	public void setFavourites(Favourites favourites) {
+		this.favourites = favourites;
 	}
 
 	

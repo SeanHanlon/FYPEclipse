@@ -40,6 +40,7 @@ public class UserResource {
 	UserService userService = new UserService();
 	
 	@GET
+	@Produces(MediaType.APPLICATION_JSON)
 	public List<User> getUsers() {
 		return userService.getAllUsers();
 	}
@@ -53,7 +54,31 @@ public class UserResource {
 		userService.addUser(user);
 	}
 	
+	@Context
+	private HttpServletRequest request;
+	@POST
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	@Path("/login")
+	public void login(@FormParam(value = "email") String email, @FormParam(value = "password") String password) {
+		User user = userService.loginUser(email, password);
+		
+		if (user == null)
+		{
+			System.out.println("cannot find user");
+		}
+		else
+		{
+			request.getSession().setAttribute("user", user);
+			request.getSession().setAttribute("name", user.getName());
+			System.out.println(request.getSession().getAttribute("name")+" is logged in");
+		}
+	}
 	
+	@POST
+	@Path("/logout")
+	public void logout() {
+		request.getSession().setAttribute("user", null);
+	}
 	
 	/*@PUT
 	@Path("/{userId}")
