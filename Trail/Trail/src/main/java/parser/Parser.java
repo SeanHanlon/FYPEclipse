@@ -18,7 +18,7 @@ import REST.Trail.model.Trail;
 import REST.Trail.persistence.PersistenceUtil;
 
 
-// TODO: Relook at logic for pulling data to search by a string rather than index
+
 public class Parser {
 
 	public static void main(String argv[]) {
