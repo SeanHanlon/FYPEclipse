@@ -18,7 +18,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import REST.store.model.Item;
+
 
 //@NamedQuery(name = "Item.findByCategory", query = "select o from Item o where o.category like concat('%', :category, '%') "),
 @NamedQueries( {
@@ -59,6 +59,14 @@ public class Trail {
 					@JoinColumn(name = "item_id", referencedColumnName = "id") })
 	@ElementCollection(targetClass = Item.class)
 	private Set<Favourites> user_favs = new HashSet<>();*/
+	
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinTable(name = "FAVOURITES", joinColumns = {
+			@JoinColumn(name = "TRAIL_ID", referencedColumnName = "id")}, inverseJoinColumns = {
+					@JoinColumn(name = "USER_ID", referencedColumnName = "id")})
+	@ElementCollection(targetClass = User.class)
+	private Set<User> users;
+	
 	
 	public Trail() {
 		
@@ -173,6 +181,14 @@ public class Trail {
 
 	public void setFinLong(double finLong) {
 		this.finLong = finLong;
+	}
+
+	public Set<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(Set<User> users) {
+		this.users = users;
 	}
 
 	/*public Favourites getFavourites() {

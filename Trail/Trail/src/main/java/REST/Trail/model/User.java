@@ -1,13 +1,16 @@
 package REST.Trail.model;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
@@ -32,8 +35,8 @@ public class User {
 	private String email;
 	private String password;
 	
-	@OneToOne(fetch=FetchType.EAGER)
-	private Favourites favourites;
+	@ManyToMany(mappedBy = "users")
+	private Set<Trail> trails = new HashSet<Trail>();
 	
 	public User() {
 		
@@ -77,14 +80,12 @@ public class User {
 		this.password = password;
 	}
 
-	public Favourites getFavourites() {
-		return favourites;
+	public Set<Trail> getTrails() {
+		return trails;
 	}
 
-	public void setFavourites(Favourites favourites) {
-		this.favourites = favourites;
+	public void setTrails(Set<Trail> trails) {
+		this.trails = trails;
 	}
-	
-	
-	
+
 }

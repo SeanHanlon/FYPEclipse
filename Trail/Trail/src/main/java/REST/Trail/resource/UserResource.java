@@ -1,7 +1,9 @@
 package REST.Trail.resource;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
@@ -85,8 +87,23 @@ public class UserResource {
 	@Path("/getFavs")
 	public List<Trail> getFavs() {
 		User user = (User) request.getSession().getAttribute("user");
-		//List<Trail> trails = user.getFavourites().getTrails();
-		return null;
+		
+		Trail trail = new Trail();
+		
+		System.out.println(user.getTrails());
+		return (List<Trail>) user.getTrails();
+		//Set<Trail> trails = user.getTrails();
+		
+		
+		
+		/*for(int i = 0; i < trails.size(); i++) {
+			String trailName = null;
+			trailName = trails;
+		}*/
+		
+		
+		//System.out.println(trails.getClass().);
+		//return null;
 		
 	}
 	
