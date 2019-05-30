@@ -42,11 +42,13 @@ public class TrailService {
 		return finalTrails;
 	}
 	
-	/*
-	public Trail getTrail(long id) {
-		return trails.get(id);
+	
+	public Trail getTrailById(long id) {
+		Trail trail = PersistenceUtil.findTrailById(id);
+		return trail;
 	}
 	
+	/*
 	public Trail addTrail(Trail trail) {
 		trail.setId(trails.size() + 1);
 		trails.put(trail.getId(), trail);

@@ -35,7 +35,7 @@ public class User {
 	private String email;
 	private String password;
 	
-	@ManyToMany(mappedBy = "users")
+	@ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
 	private Set<Trail> trails = new HashSet<Trail>();
 	
 	public User() {

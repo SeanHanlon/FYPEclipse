@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 //@NamedQuery(name = "Item.findByCategory", query = "select o from Item o where o.category like concat('%', :category, '%') "),
 @NamedQueries( {
 	@NamedQuery(name = "Trail.getAll", query = " select o from Trail o"),
+	@NamedQuery(name = "Trail.findById", query = "select o from Trail o where o.id=:id"),
 	@NamedQuery(name = "Trail.findByName", query = "select o from Trail o where o.name=:name"),
 	@NamedQuery(name = "Trail.findByFormat", query = "select o from Trail o where o.format=:format"),
 	@NamedQuery(name = "Trail.nameSearch", query = "select o from Trail o where o.name like concat('%', :name, '%')"),

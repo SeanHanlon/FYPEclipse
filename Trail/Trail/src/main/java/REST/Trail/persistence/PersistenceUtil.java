@@ -75,6 +75,16 @@ public class PersistenceUtil implements Serializable {
 			return users.get(0);
 	}
 	
+	public static Trail findTrailById(long id){
+		EntityManager em = emf.createEntityManager();
+		List<Trail> trails = (List<Trail>) em.createNamedQuery("Trail.findById").setParameter("id", id).getResultList();
+		em.close();
+		if (trails.size() == 0)
+			return null;
+		else 
+			return trails.get(0);
+	}
+	
 	public static List<Trail> getAllTrails(){
 		EntityManager em = emf.createEntityManager();
 		List<Trail> trails = (List<Trail>) em.createNamedQuery("Trail.getAll").getResultList();

@@ -20,6 +20,7 @@ import javax.ws.rs.core.MediaType;
 
 import REST.Trail.model.Trail;
 import REST.Trail.model.User;
+import REST.Trail.service.TrailService;
 import REST.Trail.service.UserService;
 
 import java.io.File;
@@ -41,6 +42,7 @@ import org.glassfish.jersey.server.Uri;
 public class UserResource {
 
 	UserService userService = new UserService();
+	TrailService trailService = new TrailService();
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -85,32 +87,28 @@ public class UserResource {
 	
 	@GET
 	@Path("/getFavs")
-	public List<Trail> getFavs() {
+	public Set<Trail> getFavs() {
 		User user = (User) request.getSession().getAttribute("user");
 		
-		Trail trail = new Trail();
+		System.out.println(user.getName());
 		
-		System.out.println(user.getTrails());
-		return (List<Trail>) user.getTrails();
-		//Set<Trail> trails = user.getTrails();
-		
-		
-		
-		/*for(int i = 0; i < trails.size(); i++) {
-			String trailName = null;
-			trailName = trails;
-		}*/
-		
-		
-		//System.out.println(trails.getClass().);
-		//return null;
+		return user.getTrails();
 		
 	}
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	@Path("/addFav")
-	public void addFav(@FormParam(value = "name") String name) {
+	public void addFav(@FormParam(value = "id") long id) {
+		
+		User user = (User) request.getSession().getAttribute("user");
+		
+		System.out.println(user.getName());
+		
+		Trail trail = trailService.getTrailById(id);
+		
+		user.getTrails().add(trail);
+		
 		
 	}
 	
