@@ -5,11 +5,15 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -35,8 +39,15 @@ public class User {
 	private String email;
 	private String password;
 	
-	@ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
-	private Set<Trail> trails = new HashSet<Trail>();
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinTable(name = "FAVOURITES", joinColumns = {
+			@JoinColumn(name = "USER_ID", referencedColumnName = "id")}, inverseJoinColumns = {
+					@JoinColumn(name = "TRAIL_ID", referencedColumnName = "id")})
+	@ElementCollection(targetClass = Trail.class)
+	private Set<Trail> trails;
+	
+	/*@ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
+	private Set<Trail> trails = new HashSet<Trail>();*/
 	
 	public User() {
 		
@@ -87,5 +98,14 @@ public class User {
 	public void setTrails(Set<Trail> trails) {
 		this.trails = trails;
 	}
+
+	/*public Set<Trail> getTrails() {
+		return trails;
+	}
+
+	public void setTrails(Set<Trail> trails) {
+		this.trails = trails;
+	}*/
+	
 
 }

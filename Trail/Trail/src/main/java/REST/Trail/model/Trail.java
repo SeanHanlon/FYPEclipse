@@ -61,12 +61,15 @@ public class Trail {
 	@ElementCollection(targetClass = Item.class)
 	private Set<Favourites> user_favs = new HashSet<>();*/
 	
-	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	/*@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinTable(name = "FAVOURITES", joinColumns = {
 			@JoinColumn(name = "TRAIL_ID", referencedColumnName = "id")}, inverseJoinColumns = {
 					@JoinColumn(name = "USER_ID", referencedColumnName = "id")})
 	@ElementCollection(targetClass = User.class)
-	private Set<User> users;
+	private Set<User> users;*/
+	
+	@ManyToMany(mappedBy = "trails", fetch = FetchType.EAGER)
+	private Set<User> users = new HashSet<User>();
 	
 	
 	public Trail() {
@@ -191,6 +194,14 @@ public class Trail {
 	public void setUsers(Set<User> users) {
 		this.users = users;
 	}
+
+	/*public Set<User> getUsers() {
+		return users;
+	}
+
+	public void setUsers(Set<User> users) {
+		this.users = users;
+	}*/
 
 	/*public Favourites getFavourites() {
 		return favourites;
