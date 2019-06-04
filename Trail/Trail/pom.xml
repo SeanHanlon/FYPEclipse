@@ -103,6 +103,16 @@
     <version>2.1</version>
 </dependency>
 
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-jdk14</artifactId>
+    <version>1.7.25</version>
+</dependency>
+<dependency>
+        <groupId>org.glassfish.jersey.media</groupId>
+        <artifactId>jersey-media-json-jackson</artifactId>
+</dependency>
+
     </dependencies>
     <properties>
         <jersey.version>2.16</jersey.version>

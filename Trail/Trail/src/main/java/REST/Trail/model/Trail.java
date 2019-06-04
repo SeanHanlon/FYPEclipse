@@ -1,5 +1,6 @@
 package REST.Trail.model;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -33,7 +34,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @XmlRootElement
-public class Trail {
+public class Trail implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -69,7 +75,7 @@ public class Trail {
 	private Set<User> users;*/
 	
 	@ManyToMany(mappedBy = "trails", fetch = FetchType.EAGER)
-	private Set<User> users = new HashSet<User>();
+	private Set<User> users = new HashSet<>();
 	
 	
 	public Trail() {
@@ -193,6 +199,10 @@ public class Trail {
 
 	public void setUsers(Set<User> users) {
 		this.users = users;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	/*public Set<User> getUsers() {

@@ -1,7 +1,10 @@
 package REST.Trail.model;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -24,12 +27,22 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries( {
 	@NamedQuery(name = "User.findAll", query = "select o from User o"),
 	@NamedQuery(name = "User.findByName", query = "select o from User o where o.name=:name"),
-	@NamedQuery(name = "User.findByEmail", query = "select o from User o where o.email=:email")
+	@NamedQuery(name = "User.findByEmail", query = "select o from User o where o.email=:email"),
+	//@NamedQuery(name = "User.getFavs", query = "select o from Favourites o where o.USER_ID=:id")
+	//SELECT COUNT(u) FROM User u JOIN u.followers f WHERE u.userId =:userId
+	//select * from favourites where USER_ID = 1;
+	//select b from Brand b inner join b.categoryCollection category where category.id = :categoryId;
 })
 
 @Entity
 @XmlRootElement
-public class User {
+public class User implements Serializable{
+
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -43,8 +56,7 @@ public class User {
 	@JoinTable(name = "FAVOURITES", joinColumns = {
 			@JoinColumn(name = "USER_ID", referencedColumnName = "id")}, inverseJoinColumns = {
 					@JoinColumn(name = "TRAIL_ID", referencedColumnName = "id")})
-	@ElementCollection(targetClass = Trail.class)
-	private Set<Trail> trails;
+	List<Trail> trails = new ArrayList<>();
 	
 	/*@ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
 	private Set<Trail> trails = new HashSet<Trail>();*/
@@ -90,12 +102,22 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	
 
-	public Set<Trail> getTrails() {
+	/*public Set<Trail> getTrails() {
 		return trails;
 	}
 
 	public void setTrails(Set<Trail> trails) {
+		this.trails = trails;
+	}*/
+
+	public List<Trail> getTrails() {
+		return trails;
+	}
+
+	public void setTrails(List<Trail> trails) {
 		this.trails = trails;
 	}
 
@@ -106,6 +128,16 @@ public class User {
 	public void setTrails(Set<Trail> trails) {
 		this.trails = trails;
 	}*/
+	public void addFav(Trail trail) {
+		trails.add(trail);
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	
+	
 	
 
 }

@@ -2,6 +2,7 @@ package REST.Trail.persistence;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -65,6 +66,16 @@ public class PersistenceUtil implements Serializable {
 			return users.get(0);
 	}
 	
+	/*public static Set<Trail> getFavs(User user){
+		EntityManager em = emf.createEntityManager();
+		Set<Trail> trails = (Set<Trail>) em.createNamedQuery("User.getFavs").setParameter("id", user.getId()).getResultList();
+		em.close();
+		if (trails.size() == 0)
+			return null;
+		else 
+			return trails;
+	}*/
+	
 	public static User findUserByEmail(String email){
 		EntityManager em = emf.createEntityManager();
 		List<User> users = (List<User>) em.createNamedQuery("User.findByEmail").setParameter("email", email).getResultList();
@@ -111,6 +122,8 @@ public class PersistenceUtil implements Serializable {
 		else 
 			return trails;
 	}
+	
+	
 	
 	public static List<Trail> gradeTrails(String searchParam) {
 		EntityManager em = emf.createEntityManager();

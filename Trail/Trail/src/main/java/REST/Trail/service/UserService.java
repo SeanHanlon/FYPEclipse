@@ -3,14 +3,19 @@ package REST.Trail.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import REST.Trail.*;
 import REST.Trail.model.User;
+import REST.Trail.model.Trail;
 import REST.Trail.persistence.PersistenceUtil;
 
 
 public class UserService {
 	
+	//private Set<Trail> trails;
+	List<Trail> trails = null;
+
 	public UserService() {
 
 	}
@@ -31,6 +36,15 @@ public class UserService {
 			return user;
 		}
 		return null;
+	}
+	
+	public List<Trail> getUserFavs(User user) {
+		//trails = null;
+		//trails = PersistenceUtil.getFavs(user);
+		//Set<Trail> trails = null;
+		trails.addAll(user.getTrails());
+		return trails;
+		
 	}
 	
 	/*public User getUser(long id) {

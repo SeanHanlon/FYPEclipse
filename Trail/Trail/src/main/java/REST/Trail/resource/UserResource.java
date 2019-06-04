@@ -40,14 +40,13 @@ import org.glassfish.jersey.server.Uri;
 
 
 @Path("/users")
-/*@Consumes(MediaType.APPLICATION_JSON)
-@Produces(MediaType.APPLICATION_JSON)*/
 public class UserResource {
 
 	UserService userService = new UserService();
 	TrailService trailService = new TrailService();
 	
 	@GET
+	@Path("/getUsers")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<User> getUsers() {
 		return userService.getAllUsers();
@@ -72,6 +71,7 @@ public class UserResource {
 	private HttpServletRequest request;*/
 	@POST
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	@Produces(MediaType.TEXT_PLAIN)
 	@Path("/login")
 	public String login(@FormParam(value = "email") String email, @FormParam(value = "password") String password) {
 		User user = userService.loginUser(email, password);
@@ -86,9 +86,11 @@ public class UserResource {
 			request.getSession().setAttribute("user", user);
 			request.getSession().setAttribute("name", user.getName());
 			request.getSession().setAttribute("id", user.getId());
-			System.out.println(request.getSession().getAttribute("name")+" is logged in");
+			request.getSession().setAttribute("trails", user.getTrails());
+			request.setAttribute("trails", user.getTrails());
+			//System.out.println(request.getSession().getAttribute("name")+" is logged in");
 			String name = (String) request.getSession().getAttribute("name");
-			System.out.println(name);
+			//System.out.println(name);
 			return name;
 		}
 		
@@ -109,57 +111,59 @@ public class UserResource {
 		request.getSession().setAttribute("user", null);
 	}
 	
+	/*@GET
+	@Path("/getFavs")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public List<Trail> getFavs() {
+		List<Trail> trails = new ArrayList<>();
+		User user = (User) request.getSession().getAttribute("user");
+		//User user = PersistenceUtil.findUserByEmail("sean@gmail.com");
+		//request.getSession().setAttribute("user", user);
+		//User user = (User) request.getSession().getAttribute("user");
+		System.out.println("TheUser" + user.getName()+ " is logged in");
+		System.out.println(user.getTrails().get(0).getName());
+		
+		for(int i = 0;i< user.getTrails().size(); i++) 
+		{
+			trails.add(user.get)
+		}
+		//System.out.println(user.getName());
+		//Set<Trail> trails = (Set<Trail>) request.getSession().getAttribute("trails");
+		
+		trails.addAll(user.getTrails());
+		System.out.println(trails.get(0).getName());
+		//trails = (List<Trail>) request.getAttribute("trails");
+		return trails;
+	}*/
+	
 	@GET
 	@Path("/getFavs")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Set<Trail> getFavs() {
+	@Consumes(MediaType.APPLICATION_JSON)
+	public List<Trail> getFavs() {
+		List<Trail> trails = new ArrayList<>();
+		User user = (User) request.getSession().getAttribute("user");
+		//User user = PersistenceUtil.findUserByEmail("sean@gmail.com");
+		//request.getSession().setAttribute("user", user);
+		//User user = (User) request.getSession().getAttribute("user");
+		System.out.println("TheUser" + user.getName()+ " is logged in");
+		System.out.println(user.getTrails().get(0).getName());
 		
-		User user = PersistenceUtil.findUserByName("Sean");
-		return user.getTrails();
-		
-		/*HttpSession sess = request.getSession(false);
-		if (sess != null) {
-		   // it's valid
-			User user = (User) request.getSession().getAttribute("user");
-			return user.getTrails();
-		}
-		else {
-			return null;
+		/*for(int i = 0;i< user.getTrails().size(); i++) 
+		{
+			trails.add(user.get)
 		}*/
+		//System.out.println(user.getName());
+		//Set<Trail> trails = (Set<Trail>) request.getSession().getAttribute("trails");
 		
-		/*String name = (String) request.getSession().getAttribute("name");
-		
-		if(name == null) {
-			return null;
-		}
-		else {
-			User user = PersistenceUtil.findUserByName(name);
-			
-			return user.getTrails();
-		}*/
-		
-		
-		/*String name = (String) request.getSession().getAttribute("name");
-		
-		User user = PersistenceUtil.findUserByName(name);
-		
-		return user.getTrails();*/
-		
-		/*if(request.getSession().getAttribute("user") == null) {
-			return null;
-		}
-		else {
-			System.out.println(user.getName());
-			
-			
-			return user.getTrails();
-		}*/
-		
-		
-		
-		
-		
+		trails.addAll(user.getTrails());
+		System.out.println(trails.get(0).getName());
+		//trails = (List<Trail>) request.getAttribute("trails");
+		return trails;
 	}
+	
+	
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -167,18 +171,26 @@ public class UserResource {
 	public void addFav(@FormParam(value = "id") long id) {
 		
 		User user = (User) request.getSession().getAttribute("user");
-		
-		Set<Trail> trails = new HashSet<Trail>();
-		
+		//long theId = id;
 		System.out.println(user.getName());
 		
+		//Set<Trail> trails = null;
+		
 		Trail trail = trailService.getTrailById(id);
-		trails.add(trail);
+		user.addFav(trail);
 		
-		//user.getTrails().add(trail);
+		//trails.add(trail);
 		//user.setTrails(trails);
-		user.setTrails(trails);
+		//user.getTrails().add(trail);
+		//System.out.println(user.getTrails());
+		//user.getTrails().add(trail);
+		//user.addFav(trail);
+		//user.addFav(trail);
+		//trail.getUsers().add(user);
+		/*trail.getUsers().add(user);
 		
+		PersistenceUtil.merge(user);
+		PersistenceUtil.merge(trail);*/
 		PersistenceUtil.merge(user);
 		
 		

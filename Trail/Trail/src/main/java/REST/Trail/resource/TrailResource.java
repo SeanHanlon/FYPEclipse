@@ -19,12 +19,15 @@ import REST.Trail.service.TrailService;
 import REST.Trail.service.UserService;
 
 @Path("/trails")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class TrailResource {
 	
 	TrailService trailService = new TrailService();
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
+	@Path("/getAllTrails")
 	public List<Trail> getTrails() {
 		return trailService.getAllTrails();
 	}
