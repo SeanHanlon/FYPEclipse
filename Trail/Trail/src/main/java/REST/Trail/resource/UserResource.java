@@ -174,6 +174,8 @@ public class UserResource {
 		//long theId = id;
 		System.out.println(user.getName());
 		
+		
+		
 		//Set<Trail> trails = null;
 		
 		Trail trail = trailService.getTrailById(id);
